@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="th">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ไซด์ไลน์เชียงใหม่ รับงานฟีลแฟน บริการระดับพรีเมียม">
+  <meta name="keywords" content="ไซด์ไลน์เชียงใหม่, รับงานเชียงใหม่, สาวสวยเชียงใหม่">
+  <meta name="robots" content="index, follow"><!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="ไซด์ไลน์เชียงใหม่ - รับงานฟีลแฟน">
+  <meta property="og:description" content="บริการไซด์ไลน์เชียงใหม่ระดับพรีเมียม พร้อมสาวสวยคุณภาพ">
+  <meta property="og:image" content="https://example.com/path-to-your-icon-image.jpg">
+  <meta property="og:url" content="https://example.com">
+  <meta property="og:type" content="website"><!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ไซด์ไลน์เชียงใหม่ - รับงานฟีลแฟน">
+  <meta name="twitter:description" content="บริการไซด์ไลน์เชียงใหม่ระดับพรีเมียม พร้อมสาวสวยคุณภาพ">
+  <meta name="twitter:image" content="https://example.com/path-to-your-icon-image.jpg"><!-- Canonical URL -->
+  <link rel="canonical" href="https://example.com"><!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon"><!-- Preconnect สำหรับ Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"><!-- AOS Animation CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet"><!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pap7kLZ1+4OrE1jRkKtXfs5h+LfxC2j0Z6SLlnO+TShZT9hChhX8Ecq5YtQ49/eC2eDVhX8lI4eSrb3X7x2MZw==" crossorigin="anonymous" referrerpolicy="no-referrer"><!-- Manifest สำหรับ PWA -->
+  <link rel="manifest" href="manifest.json">
+  <title>ไซด์ไลน์เชียงใหม่ - รับงานฟีลแฟน</title>
+  <style>
+    /* CSS Variables for Consistency */
+    :root {
+      --primary-color: #ff3366;
+      --secondary-color: #333;
+      --bg-color: #f9f9f9;
+      --card-bg: #fff;
+      --font-family: 'Poppins', sans-serif;
+      --transition-speed: 0.3s;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-family);
+      background-color: var(--bg-color);
+      color: var(--secondary-color);
+      line-height: 1.6;
+    }
+    /* คลาสสำหรับซ่อนองค์ประกอบ (Visually hidden) เพื่อ accessibility */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+    }
+    /* Skip Navigation สำหรับ Accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary-color);
+      color: #fff;
+      padding: 8px;
+      z-index: 100;
+      transition: top 0.3s;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+    header {
+     background: linear-gradient(135deg, #ff3366 0%, #e62e5b 100%);
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 2.5em;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.2em;
+    }
+    main {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    h3 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform var(--transition-speed);
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+    }
+    .card:hover, .card:focus {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .card h3 {
+      margin: 15px 0 10px;
+      font-weight: 600;
+    }
+    .card p {
+      padding: 0 15px 15px;
+      font-size: 0.95em;
+    }
+    .contact-btn {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color var(--transition-speed);
+      margin-bottom: 15px;
+    }
+    .contact-btn:hover {
+      background-color: #e62e5b;
+    }
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px 20px;
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: 600;
+      color: #aaa;
+      cursor: pointer;
+      transition: color var(--transition-speed);
+      background: none;
+      border: none;
+    }
+    .close:hover {
+      color: #000;
+    }
+    footer {
+      background-color: var(--secondary-color);
+      color: #fff;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.9em;
+    }
+    /* Back-to-Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--primary-color);
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      transition: background-color var(--transition-speed);
+      z-index: 1001;
+    }
+    #backToTop:hover {
+      background: #e62e5b;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+      .modal-content {
+        width: 90%;
+      }
+    }
+  </style><!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ไซด์ไลน์เชียงใหม่",
+    "image": "https://example.com/path-to-your-icon-image.jpg",
+    "telephone": "+66-xx-xxx-xxxx",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ที่อยู่",
+      "addressLocality": "เชียงใหม่",
+      "addressRegion": "เชียงใหม่",
+      "postalCode": "50000",
+      "addressCountry": "TH"
+    },
+    "url": "https://example.com",
+    "priceRange": "฿฿",
+    "description": "ไซด์ไลน์เชียงใหม่ รับงานฟีลแฟน บริการระดับพรีเมียม"
+  }
+  </script>
+ </head>
+ <body>
+  <!-- Skip Navigation Link --> <a class="skip-link" href="#mainContent">ข้ามเมนูไปยังเนื้อหา</a>
+  <header>
+   <h1>ไซด์ไลน์เชียงใหม่</h1>
+   <p>สาวสวยฟีลแฟนระดับพรีเมียม</p>
+  </header>
+  <main id="mainContent">
+   <!-- About Section -->
+   <section class="about-section" data-aos="fade-up">
+    <h2>เกี่ยวกับเรา</h2>
+    <p>เราเป็นบริการไซด์ไลน์เชียงใหม่ที่คัดสรรสาวสวยคุณภาพระดับพรีเมียม พร้อมให้บริการในรูปแบบฟีลแฟนอย่างมืออาชีพ สร้างประสบการณ์พิเศษและความทรงจำที่ไม่มีวันลืม</p>
+   </section><!-- Services Section -->
+   <section class="services-section" data-aos="fade-up">
+    <h2>บริการของเรา</h2>
+    <p>บริการฟีลแฟน 100% โดยสาวสวยที่มีความเป็นมืออาชีพ ทั้งในด้านการพูดคุยและการบริการในทุกขั้นตอน มั่นใจในคุณภาพและความพึงพอใจสูงสุดของลูกค้า</p>
+   </section><!-- Cards Section for Service Girls -->
+   <section class="cards-section" data-aos="fade-up">
+    <h2>น้องรับงานของเรา</h2>
+    <div class="cards">
+     <div class="card" onclick="openModal(1)" role="button" tabindex="0">
+      <img src="https://img2.pic.in.th/pic/4d2f07c393bfe4e276576edb5114a227.jpg" alt="โมจิ">
+      <h3>โมจิ</h3>
+      <p>สาวสวยหน้าใส บริการดี ฟิวแฟนเต็มที่ เรียบร้อยพูดเก่ง</p>
+     </div>
+     <div class="card" onclick="openModal(2)" role="button" tabindex="0">
+      <img src="https://img2.pic.in.th/pic/57694c8be161449914fa79620aea12e9.jpg" alt="พะแพง">
+      <h3>พะแพง</h3>
+      <p>ขาวอวบ น่ารักใสๆ ฟิวแฟนหวานๆ คุยเก่ง ตรงปก</p>
+     </div>
+     <div class="card" onclick="openModal(3)" role="button" tabindex="0">
+      <img src="https://img5.pic.in.th/file/secure-sv1/78932c6fdc677cf4ff55f8ee6bac5df6.jpg" alt="ปันปัน">
+      <h3>ปันปัน</h3>
+      <p>สาวสวยหุ่นดี พูดจาน่ารัก ฟีลแฟนจริงจัง สวยใส สุดเซ็กซี่</p>
+     </div>
+     <div class="card" onclick="openModal(4)" role="button" tabindex="0">
+      <img src="https://img5.pic.in.th/file/secure-sv1/2236113bcfcb8b08792b01bfab857441.jpg" alt="ใบหยก">
+      <h3>ใบหยก</h3>
+      <p>สาวสวยหุ่นดี ร่าเริงน่ารัก พูดจาสุภาพ บริการเป็นกันเอง</p>
+     </div>
+     <div class="card" onclick="openModal(5)" role="button" tabindex="0">
+      <img src="https://img2.pic.in.th/pic/8286a9ed362b91f35ea3d4836fe19f4e.jpg" alt="โบวี่">
+      <h3>โบวี่</h3>
+      <p>สาวร่าเริงสดใส บริการฟิวแฟนสุดพิเศษ ทำให้คุณรู้สึกพิเศษ</p>
+     </div>
+     <div class="card" onclick="openModal(6)" role="button" tabindex="0">
+      <img src="https://img5.pic.in.th/file/secure-sv1/316b0390064b0482182a520c6fed0cba.jpg" alt="เบล">
+      <h3>เบล</h3>
+      <p>สาวเซ็กซี่ ขี้เล่น ฟิวแฟนเต็มอิ่ม ใส่ใจทุกการบริการ</p>
+     </div>
+     <div class="card" onclick="openModal(7)" role="button" tabindex="0">
+      <img src="https://img2.pic.in.th/pic/cb540cd4ccf9bd004ee2fd76726f50cf.jpg" alt="เนย">
+      <h3>เนย</h3>
+      <p>ขาวอวบ เรียบร้อยและเซ็กซี่ ฟิวแฟน 100%</p>
+     </div>
+     <div class="card" onclick="openModal(8)" role="button" tabindex="0">
+      <img src="https://img5.pic.in.th/file/secure-sv1/d4ac64190b6ed20e6a3e474ab456fe10.jpg" alt="นินิว">
+      <h3>นินิว</h3>
+      <p>สาวหุ่นดี เรียบร้อยและน่ารัก บริการดี ฟิวแฟนเต็มที่</p>
+     </div>
+     <div class="card" onclick="openModal(9)" role="button" tabindex="0">
+      <img src="https://img2.pic.in.th/pic/5b9a81360697895f512c77b91d16ffa7.jpg" alt="น้ำอิง">
+      <h3>น้ำอิง</h3>
+      <p>สาวสวยน่ารัก พูดจาเป็นกันเอง พร้อมฟิวแฟนที่ตรงใจคุณ</p>
+     </div>
+     <div class="card" onclick="openModal(10)" role="button" tabindex="0">
+      <img src="https://img5.pic.in.th/file/secure-sv1/b7e3bbdec05ca534f22e2ebb4dbff01d.jpg" alt="น้ำหวาน">
+      <h3>น้ำหวาน</h3>
+      <p>สาวน่ารัก ขี้เล่น ฟิวแฟนเอาใจเก่ง</p>
+     </div>
+    </div>
+   </section><!-- Pricing Section -->
+   <section class="pricing-section" data-aos="fade-up">
+    <h2>เรทราคา</h2>
+    <h3>บริการพื้นฐาน</h3>
+    <ul>
+     <li>1,500 บาท / 1 น้ำ / 1 ชั่วโมง (ไม่รวมห้อง)</li>
+     <li>ฟรีแตกบนตัว</li>
+     <li>บริการเสริม: จู๋ทำ เพิ่ม 500 บาท</li>
+    </ul>
+    <h3>สถานที่รับงาน</h3>
+    <p>พิกัด: ตัวเมืองเชียงใหม่ เช่น โรงแรม เลิฟโบ๊ต, มูฟเม้นท์ (งานนอกสถานที่มีค่าเดินทาง)</p>
+    <h3>เวลารับงาน</h3>
+    <p>ทุกวัน ตั้งแต่ 11:00 น. ถึง 03:00 น.</p>
+    <p>**ห้ามผู้ที่มีอายุต่ำกว่า 20 ปี ใช้บริการ**</p>
+   </section><!-- Social Links Section -->
+   <section class="social-links" data-aos="fade-up">
+    <h2>ติดตามเราได้ที่</h2>
+    <p><a href="https://www.tiktok.com/@168xboomx?_t=ZS-8uD95cdOPf5&amp;_r=1" target="_blank" aria-label="TikTok"> <i class="fab fa-tiktok"></i> TikTok </a> | <a href="https://x.com/Dayonesi/status/1894394253293621255?t=zuEmYNJHtGfWexNYL9QteA&amp;s=19" target="_blank" aria-label="X"> <i class="fab fa-twitter"></i> X </a></p>
+   </section>
+  </main><!-- Modal สำหรับแสดงรายละเอียด -->
+  <div id="myModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+   <div class="modal-content">
+    <!-- เพิ่มหัวข้อซ่อนสำหรับ accessibility -->
+    <h2 id="modalTitle" class="visually-hidden">รายละเอียด</h2><button class="close" onclick="closeModal()" aria-label="Close Modal">×</button>
+    <div id="modalDetails"></div>
+   </div>
+  </div>
+  <footer>
+   <p>© 2025 ไซด์ไลน์เชียงใหม่ | ทุกสิทธิ์สงวน</p>
+  </footer><!-- Back-to-Top Button --> <button id="backToTop" aria-label="Back to Top"><i class="fas fa-chevron-up"></i></button> <!-- AOS Animation JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script> 
+<script>
+
+AOS.init({
+
+duration: 800,
+
+once: true
+
+});
+
+
+</script>
+
+
+
